@@ -31,8 +31,13 @@ Execution catalogue:Go2_DRL_nav/
 source install/setup.bash && ros2 run go2_agent model_infer_receive
 
 Deployment reference:
-
+https://github.com/unitreerobotics/unitree_sdk2.git 
 https://github.com/Glowing-Torch/Deploy-an-RL-policy-on-the-Unitree-Go2-robot
+
+## 4th step send your commamd to Go2(this is connected with go2 sdk )
+commmand format: ros2 topic pub --once /goal_pose geometry_msgs/msg/Pose "{position: {x: $1, y: $2, z: 0.0}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}}"  
+python3 Go2CmdVelNode.py
+python3 cmd_vel_forwarder.py
 
 
 ## reference for gazebo traning :
