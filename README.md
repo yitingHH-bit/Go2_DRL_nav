@@ -1,5 +1,8 @@
 #this is model inference and deployment code for robot Go2:
 
+#simulation: gazebo!
+[fcdbed06-40cd-4bdf-aebc-e296b38e5331](https://github.com/user-attachments/assets/fff07e46-272e-4219-8c25-941e4605dd11)
+
 # Go2_DRL_nav — Quick Start
 
 This project downsamples the **3D LiDAR** stream to **580 points** as the policy input.  
@@ -25,8 +28,6 @@ MODEL_ROOT=/home/jack/drl/Go2_DRL_nav/src/go2_agent/go2_agent/model python3 -m g
 
 Execution catalogue:Go2_DRL_nav/
 source install/setup.bash && ros2 run go2_agent model_infer_receive
-
-#simulation: gazebo![fcdbed06-40cd-4bdf-aebc-e296b38e5331](https://github.com/user-attachments/assets/fff07e46-272e-4219-8c25-941e4605dd11)
 
 
 
