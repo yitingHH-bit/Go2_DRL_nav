@@ -9,7 +9,7 @@ sudo apt install ros-humble-velodyne
 sudo apt install ros-humble-velodyne-gazebo-plugins
 sudo apt-get install ros-humble-velodyne-description
 ## deployment 
-demo2:[https://youtu.be/Cff0wIKKi_c](https://youtu.be/DeJmNS1BONk)
+demo1:[[https://youtu.be/Cff0wIKKi_c](https://youtu.be/DeJmNS1BONk)](https://youtu.be/FB8i4oOPGyw)
 
 ## simulation: gazebo with Go2 robot (the model and sensor from:https://github.com/fishros/simdog.git )
 demo1 :https://youtu.be/Cff0wIKKi_c
