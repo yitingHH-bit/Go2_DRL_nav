@@ -26,9 +26,7 @@ MODEL_ROOT=/home/jack/drl/Go2_DRL_nav/src/go2_agent/go2_agent/model python3 -m g
 Execution catalogue:Go2_DRL_nav/
 source install/setup.bash && ros2 run go2_agent model_infer_receive
 
-#simulation: gazebo
-
-<img width="1274" height="1007" alt="image" src="https://github.com/user-attachments/assets/25525562-f190-41b8-9fd6-8ab8772b2ca2" />
+#simulation: gazebo![fcdbed06-40cd-4bdf-aebc-e296b38e5331](https://github.com/user-attachments/assets/fff07e46-272e-4219-8c25-941e4605dd11)
 
 
 
