@@ -1,6 +1,15 @@
 #this is model inference and deployment code for robot Go2:
+## base condition
+sudo apt install ros-humble-gazebo-ros2-control
+sudo apt install ros-humble-xacro
+sudo apt install ros-humble-robot-localization
+sudo apt install ros-humble-ros2-controllers
+sudo apt install ros-humble-ros2-control
+sudo apt install ros-humble-velodyne
+sudo apt install ros-humble-velodyne-gazebo-plugins
+sudo apt-get install ros-humble-velodyne-description
 
-## simulation: gazebo with Go2 robot (the model and sensor from )
+## simulation: gazebo with Go2 robot (the model and sensor from:https://github.com/fishros/simdog.git )
 <img width="1274" height="1007" alt="image" src="https://github.com/user-attachments/assets/3f57a861-61dc-4d66-a3d9-8420daaf1939" />
 
 
