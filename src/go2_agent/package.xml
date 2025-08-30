@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>go2_agent</name>
+  <version>2.0.0</version>
+  <description>
+    ROS Humble 2 package for go2_agent.
+  </description>
+  <author email="kaolalaotongxue@robotis.com">Ryan Shim</author>
+  <maintainer email="kaolalaotongxue@robotis.com">Pyo</maintainer>
+  <license>Apache 2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclpy</depend>
+  <depend>std_srvs</depend>
+  <depend>unitree_api</depend>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <export>
+    <build_type>ament_python</build_type>
+    
+  </export>
+</package>

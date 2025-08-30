@@ -1,0 +1,38 @@
+# --- ROS2/colcon ---
+build/
+install/
+log/
+.colcon/
+.ros/
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+
+# --- IDE / OS 杂项 ---
+.vscode/
+.idea/
+.DS_Store
+
+# --- 数据/模型/大文件（两选一：要么忽略，要么用 Git LFS，见下） ---
+# 如果不想把权重进 git，请保持忽略：
+*.pt
+*.pth
+*.onnx
+*.pb
+*.bag
+*.npz
+*.npy
+*.log
+logs/
+output/
+checkpoints/
+datasets/
+tmp/
