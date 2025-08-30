@@ -24,12 +24,12 @@ MODEL_ROOT = _find_model_root()
 print(f"[BOOT] MODEL_ROOT={MODEL_ROOT}", flush=True)
 
 MODEL_PATHS = {
-    "1": os.path.join(MODEL_ROOT, "td3_21_stage_7", "stage7_agent_ep21000.pt"),
-    "0": os.path.join(MODEL_ROOT, "td3_21_stage_7", "stage7_agent_ep14800.pt"),
-    "2": os.path.join(MODEL_ROOT, "td3_21_stage_7", "stage7_agent_ep22800.pt"),
-    "3": os.path.join(MODEL_ROOT, "td3_22_stage_7", "stage7_agent_ep24100.pt"),
-    "4": os.path.join(MODEL_ROOT, "td3_23_stage_7", "stage7_agent_ep24100.pt"), #19200
-    "5": os.path.join(MODEL_ROOT, "td3_24_stage_7", "stage7_agent_ep29700.pt"),
+    "1": os.path.join(MODEL_ROOT, "td3_21", "stage7_agent_ep21000.pt"),
+    "0": os.path.join(MODEL_ROOT, "td3_21", "stage7_agent_ep14800.pt"),
+    "2": os.path.join(MODEL_ROOT, "td3_21", "stage7_agent_ep22800.pt"),
+    "3": os.path.join(MODEL_ROOT, "td3_22", "stage7_agent_ep24100.pt"),
+    "4": os.path.join(MODEL_ROOT, "td3_23", "stage7_agent_ep24100.pt"), #19200
+    "5": os.path.join(MODEL_ROOT, "td3_24", "stage7_agent_ep29700.pt"),
 }
 
 MODEL_CHOICE = os.getenv("MODEL_CHOICE", "1")

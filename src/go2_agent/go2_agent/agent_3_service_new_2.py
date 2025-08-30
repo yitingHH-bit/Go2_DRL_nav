@@ -10,6 +10,7 @@ from datetime import datetime
 from go2_agent.td3_algrithm import Customed_TD3
  # 你的 TD3（Actor 里有 num_scan=580, extra_inputs=4）
 
+import os
 app = Flask(__name__)
 logging.getLogger("werkzeug").setLevel(logging.WARNING)
 
@@ -29,13 +30,14 @@ MODEL_ROOT = _find_model_root()
 print(f"[BOOT] MODEL_ROOT={MODEL_ROOT}", flush=True)
 
 MODEL_PATHS = {
-    "0": "model/td3_21/stage7_agent_ep14800.pt",
-    "1": "model/td3_21/stage7_agent_ep21000.pt",
-    "2": "model/td3_21/stage7_agent_ep22800.pt",
-    "3": "model/td3_22/stage7_agent_ep24100.pt",
-    "4": "model/td3_23/stage7_agent_ep24100.pt", #19200
-    "5": "model/td3_24/stage7_agent_ep29700.pt",
+    "1": os.path.join(MODEL_ROOT, "td3_21", "stage7_agent_ep21000.pt"),
+    "0": os.path.join(MODEL_ROOT, "td3_21", "stage7_agent_ep14800.pt"),
+    "2": os.path.join(MODEL_ROOT, "td3_21", "stage7_agent_ep22800.pt"),
+    "3": os.path.join(MODEL_ROOT, "td3_22", "stage7_agent_ep24100.pt"),
+    "4": os.path.join(MODEL_ROOT, "td3_23", "stage7_agent_ep24100.pt"), #19200
+    "5": os.path.join(MODEL_ROOT, "td3_24", "stage7_agent_ep29700.pt"),
 }
+
 
 
 WARMUP_STEPS = int(os.getenv("WARMUP_STEPS", "20"))
