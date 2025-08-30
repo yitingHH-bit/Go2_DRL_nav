@@ -1,7 +1,8 @@
 #this is model inference and deployment code for robot Go2:
 
 #simulation: gazebo!
-[fcdbed06-40cd-4bdf-aebc-e296b38e5331](https://github.com/user-attachments/assets/fff07e46-272e-4219-8c25-941e4605dd11)
+<img width="1274" height="1007" alt="image" src="https://github.com/user-attachments/assets/3f57a861-61dc-4d66-a3d9-8420daaf1939" />
+
 
 # Go2_DRL_nav — Quick Start
 
