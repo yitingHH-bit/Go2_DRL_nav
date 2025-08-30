@@ -49,6 +49,7 @@ python3 Go2CmdVelNode.py
 python3 cmd_vel_forwarder.py
 
 
+##
 ## reference for gazebo traning :
 TD3: https://github.com/sfujim/TD3.git 
 TD3:https://hrl.boyuai.com/chapter/3/%E7%9B%AE%E6%A0%87%E5%AF%BC%E5%90%91%E7%9A%84%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/  english version 
