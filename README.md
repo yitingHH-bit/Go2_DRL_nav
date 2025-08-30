@@ -26,6 +26,7 @@ MODEL_ROOT=/home/jack/drl/Go2_DRL_nav/src/go2_agent/go2_agent/model python3 -m g
 Execution catalogue:Go2_DRL_nav/
 source install/setup.bash && ros2 run go2_agent model_infer_receive
 
+<img width="1274" height="1007" alt="image" src="https://github.com/user-attachments/assets/b70790a8-d1e1-4776-bac5-4e1ac9b2e0c0" />
 
 ## reference for gazebo traning :
 TD3: https://github.com/sfujim/TD3.git 
