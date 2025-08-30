@@ -23,6 +23,8 @@ Before running, make sure your **ODOM** and **Laser/Scan** topics match your set
 
 ## 1) Start the LiDAR → LaserScan pipeline
 
+rememer unzip the model :src/go2_agent/go2_agent/model
+
 ```bash
 source install/setup.bash
   
