@@ -1,6 +1,6 @@
 #this is model inference and deployment code for robot Go2:
 
-#simulation: gazebo!
+## simulation: gazebo with Go2 robot (the model and sensor from )
 <img width="1274" height="1007" alt="image" src="https://github.com/user-attachments/assets/3f57a861-61dc-4d66-a3d9-8420daaf1939" />
 
 
@@ -30,6 +30,9 @@ MODEL_ROOT=/home/jack/drl/Go2_DRL_nav/src/go2_agent/go2_agent/model python3 -m g
 Execution catalogue:Go2_DRL_nav/
 source install/setup.bash && ros2 run go2_agent model_infer_receive
 
+Deployment reference:
+
+https://github.com/Glowing-Torch/Deploy-an-RL-policy-on-the-Unitree-Go2-robot
 
 
 ## reference for gazebo traning :
