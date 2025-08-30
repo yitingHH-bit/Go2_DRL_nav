@@ -1,4 +1,4 @@
-#this is model inference and run model code for the TD3 algirthm :
+#this is model inference and deployment code for robot Go2:
 
 # Go2_DRL_nav — Quick Start
 
