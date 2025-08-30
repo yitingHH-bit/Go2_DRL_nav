@@ -15,15 +15,26 @@ logging.getLogger("werkzeug").setLevel(logging.WARNING)
 
 from ament_index_python.packages import get_package_share_directory
 PKG = "go2_agent"
-SHARE_DIR = get_package_share_directory(PKG)
+
+def _find_model_root() -> str:
+   
+    p = os.getenv("MODEL_ROOT")
+    if p and os.path.isdir(p):
+        return os.path.abspath(p)
+    here = os.path.abspath(os.path.dirname(__file__))
+    cand = os.path.join(here, "model")
+    return cand if os.path.isdir(cand) else here
+
+MODEL_ROOT = _find_model_root()
+print(f"[BOOT] MODEL_ROOT={MODEL_ROOT}", flush=True)
 
 MODEL_PATHS = {
-    "0": "model/td3_21_stage_7/stage7_agent_ep14800.pt",
-    "1": "model/td3_21_stage_7/stage7_agent_ep21000.pt",
-    "2": "td3_21_stage_7/stage7_agent_ep22800.pt",
-    "3": "td3_22_stage_7/stage7_agent_ep24100.pt",
-    "4": "td3_23_stage_7/stage7_agent_ep24100.pt", #19200
-    "5": "td3_24_stage_7/stage7_agent_ep29700.pt",
+    "0": "model/td3_21/stage7_agent_ep14800.pt",
+    "1": "model/td3_21/stage7_agent_ep21000.pt",
+    "2": "model/td3_21/stage7_agent_ep22800.pt",
+    "3": "model/td3_22/stage7_agent_ep24100.pt",
+    "4": "model/td3_23/stage7_agent_ep24100.pt", #19200
+    "5": "model/td3_24/stage7_agent_ep29700.pt",
 }
 
 

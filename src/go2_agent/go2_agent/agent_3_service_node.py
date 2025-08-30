@@ -12,13 +12,14 @@ PKG = "go2_agent"
 SHARE_DIR = get_package_share_directory(PKG)
 
 MODEL_PATHS = {
-    "0": "model/td3_21_stage_7/stage7_agent_ep14800.pt",
-    "1": "model/td3_21_stage_7/stage7_agent_ep21000.pt",
-    "2": "td3_21_stage_7/stage7_agent_ep22800.pt",
-    "3": "td3_22_stage_7/stage7_agent_ep24100.pt",
-    "4": "td3_23_stage_7/stage7_agent_ep24100.pt", #19200
-    "5": "td3_24_stage_7/stage7_agent_ep29700.pt",
+    "0": "model/td3_21/stage7_agent_ep14800.pt",
+    "1": "model/td3_21/stage7_agent_ep21000.pt",
+    "2": "model/td3_21/stage7_agent_ep22800.pt",
+    "3": "model/td3_22/stage7_agent_ep24100.pt",
+    "4": "model/td3_23/stage7_agent_ep24100.pt", #19200
+    "5": "model/td3_24/stage7_agent_ep29700.pt",
 }
+
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 class DRLInferenceNode(Node):
