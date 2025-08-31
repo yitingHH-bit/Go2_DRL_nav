@@ -10,7 +10,6 @@ import wandb                        # (pip install wandb)
 import torch
 import torch.nn.functional as F
 import torch.nn as nn
-from ..common.ounoise_2 import OUNoise
 from .off_policy import OffPolicyAgent, Network
 import torch.backends.cudnn as cudnn
 cudnn.benchmark = True  
