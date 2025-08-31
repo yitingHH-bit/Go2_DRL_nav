@@ -1,4 +1,5 @@
 ## this rep is for the thesis:
+![Uploading image.png…]()
 
 #this is model inference and deployment code for robot Go2:
 ## base condition
