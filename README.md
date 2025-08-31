@@ -1,5 +1,6 @@
 ## this rep is for the thesis:
 <img width="1456" height="803" alt="image" src="https://github.com/user-attachments/assets/4b449e6f-af3e-4c47-9b2c-9255eacad593" />
+<img width="1456" height="803" alt="image" src="https://github.com/user-attachments/assets/7a94dccc-a7dd-47ac-99d6-f9a7a2bb0810" />
 
 #this is model inference and deployment code for robot Go2:
 ## base condition
