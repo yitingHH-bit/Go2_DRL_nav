@@ -1,3 +1,5 @@
+## this rep is for the theis:
+
 #this is model inference and deployment code for robot Go2:
 ## base condition
 sudo apt install ros-humble-gazebo-ros2-control
