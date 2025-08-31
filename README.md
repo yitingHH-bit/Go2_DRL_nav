@@ -1,5 +1,5 @@
 ## this rep is for the thesis:
-![Uploading image.png…]()
+<img width="1456" height="803" alt="image" src="https://github.com/user-attachments/assets/4b449e6f-af3e-4c47-9b2c-9255eacad593" />
 
 #this is model inference and deployment code for robot Go2:
 ## base condition
