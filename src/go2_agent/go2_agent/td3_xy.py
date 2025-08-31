@@ -20,22 +20,21 @@ POLICY_UPDATE_FREQUENCY = 1
 
 NUM_SCAN_SAMPLES= 580 
 
-stage = "td3_29"  
+env = "td3_29"  
 
-if stage == "td3_7":
+if env == "td3_7":
     SPEED_LINEAR_MAX    = 0.35
     SPEED_LINEAR_MAX_Y  = 0.20
     SPEED_ANGULAR_MAX   = 0.4
-elif stage == "td3_29":
+elif env == "td3_29":
     SPEED_LINEAR_MAX    = 0.38
     SPEED_LINEAR_MAX_Y  = 0.25
     SPEED_ANGULAR_MAX   = 0.50
-elif stage == "td3_7":
+elif env == "td3_7":
     SPEED_LINEAR_MAX            = 0.4  
     SPEED_ANGULAR_MAX           = 0.8  
     SPEED_LINEAR_MAX_Y  = 0.0
 else:
-    #
     SPEED_LINEAR_MAX    = 0.4
     SPEED_LINEAR_MAX_Y  = 0.25
     SPEED_ANGULAR_MAX   = 0.5
