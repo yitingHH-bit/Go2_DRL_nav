@@ -1,4 +1,4 @@
-## this rep is for the theis:
+## this rep is for the thesis:
 
 #this is model inference and deployment code for robot Go2:
 ## base condition
