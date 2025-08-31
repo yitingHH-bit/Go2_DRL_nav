@@ -11,19 +11,12 @@ import torch
 import torch.nn.functional as F
 import torch.nn as nn
 from ..common.ounoise_2 import OUNoise
-from .off_policy_agent_2 import OffPolicyAgent, Network
-
+from .off_policy import OffPolicyAgent, Network
 import torch.backends.cudnn as cudnn
 cudnn.benchmark = True  
-
-# 
-from ..common.settings import (
-   
-    POLICY_NOISE,
-    POLICY_NOISE_CLIP,
-    POLICY_UPDATE_FREQUENCY,
-    
-)
+POLICY_NOISE            = 0.2
+POLICY_NOISE_CLIP       = 0.5
+POLICY_UPDATE_FREQUENCY = 1
 
 NUM_SCAN_SAMPLES= 580 
 
@@ -52,7 +45,31 @@ def scale_action(a_tanh: torch.Tensor) -> torch.Tensor:
     vy = a_tanh[..., 1] * SPEED_LINEAR_MAX_Y
     omega = a_tanh[..., 2] * SPEED_ANGULAR_MAX
     return torch.stack([vx, vy, omega], dim=-1)
+class NoisePackage(object):
+    def __init__(self, action_space, mu=0.0, theta=0.15, max_sigma=0.99, min_sigma=0.01, decay_period=600000):
+        self.mu = mu
+        self.theta = theta
+        self.sigma = max_sigma
+        self.max_sigma = max_sigma
+        self.min_sigma = min_sigma
+        self.decay_period = decay_period
+        self.action_dim = action_space
+        self.reset()
 
+    def reset(self):
+        self.state = np.ones(self.action_dim) * self.mu
+
+    def evolve_state(self):
+        x = self.state
+        dx = self.theta * (self.mu - x) + self.sigma * np.random.randn(self.action_dim)
+        self.state = x + dx
+        return self.state
+
+    def get_noise(self, t=0):
+        ou_state = self.evolve_state()
+        decaying = float(float(t) / self.decay_period)
+        self.sigma = max(self.sigma - (self.max_sigma - self.min_sigma) * min(1.0, decaying), self.min_sigma)
+        return ou_state
 class MultiScaleConv1d(Network):
     
     def __init__(self,
@@ -218,7 +235,7 @@ class Critic(Network):
 class TD3(OffPolicyAgent):
     def __init__(self, device, sim_speed, hidden_size=512):
         super().__init__(device, sim_speed, action_size=3)
-        self.noise = OUNoise(3, max_sigma=0.1, min_sigma=0.1, decay_period=8e6)
+        self.noise = NoisePackage(3, max_sigma=0.1, min_sigma=0.1, decay_period=8e6)
         self.policy_noise = POLICY_NOISE
         self.noise_clip = POLICY_NOISE_CLIP
         self.policy_freq = POLICY_UPDATE_FREQUENCY
